@@ -81,3 +81,20 @@ func handlerRegister(s *state, cmd command) error {
 	log.Printf("user was created: id=%s name=%s created_at=%s", newUser.ID, newUser.Name, newUser.CreatedAt)
 	return nil
 }
+
+func handlerGetUsers(s *state, cmd command) error {
+	ctx := context.Background()
+	currentUser := s.cfgPtr.CurrentUserName
+	users, err := s.db.GetUsers(ctx)
+	if err != nil {
+		return fmt.Errorf("error fetching users: %w", err)
+	}
+	for _, user := range users {
+		if user.Name == currentUser {
+			fmt.Printf("* %s (current)\n", user.Name)
+		} else {
+			fmt.Printf("* %s\n", user.Name)
+		}
+	}
+	return nil
+}

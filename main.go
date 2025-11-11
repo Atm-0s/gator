@@ -50,6 +50,7 @@ func main() {
 	c.register("login", handlerLogin)
 	c.register("register", handlerRegister)
 	c.register("reset", handlerReset)
+	c.register("users", handlerGetUsers)
 
 	// Parse input and run
 	input := os.Args
