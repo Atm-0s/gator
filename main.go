@@ -49,6 +49,7 @@ func main() {
 	}
 	c.register("login", handlerLogin)
 	c.register("register", handlerRegister)
+	c.register("reset", handlerReset)
 
 	// Parse input and run
 	input := os.Args
