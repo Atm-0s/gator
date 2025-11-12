@@ -51,6 +51,8 @@ func main() {
 	c.register("register", handlerRegister)
 	c.register("reset", handlerReset)
 	c.register("users", handlerGetUsers)
+	c.register("agg", handlerFetchFeed)
+	c.register("addfeed", handlerAddFeed)
 
 	// Parse input and run
 	input := os.Args
