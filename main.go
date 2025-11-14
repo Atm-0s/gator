@@ -1,5 +1,8 @@
 package main
 
+/* migration command
+goose postgres -dir "sql/schema/" postgres://postgres:postgres@localhost:5432/gator up
+*/
 import (
 	"database/sql"
 	"fmt"
@@ -53,6 +56,9 @@ func main() {
 	c.register("users", handlerGetUsers)
 	c.register("agg", handlerFetchFeed)
 	c.register("addfeed", handlerAddFeed)
+	c.register("feeds", handlerGetFeeds)
+	c.register("follow", handlerFollowFeed)
+	c.register("following", handlerFollowing)
 
 	// Parse input and run
 	input := os.Args
