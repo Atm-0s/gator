@@ -54,11 +54,12 @@ func main() {
 	c.register("register", handlerRegister)
 	c.register("reset", handlerReset)
 	c.register("users", handlerGetUsers)
-	c.register("agg", handlerFetchFeed)
-	c.register("addfeed", handlerAddFeed)
+	c.register("agg", handlerAgg)
+	c.register("addfeed", middlewareLoggedIn(handlerAddFeed))
 	c.register("feeds", handlerGetFeeds)
-	c.register("follow", handlerFollowFeed)
-	c.register("following", handlerFollowing)
+	c.register("follow", middlewareLoggedIn(handlerFollowFeed))
+	c.register("following", middlewareLoggedIn(handlerFollowing))
+	c.register("unfollow", middlewareLoggedIn(handlerUnfollow))
 
 	// Parse input and run
 	input := os.Args
