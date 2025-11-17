@@ -60,6 +60,7 @@ func main() {
 	c.register("follow", middlewareLoggedIn(handlerFollowFeed))
 	c.register("following", middlewareLoggedIn(handlerFollowing))
 	c.register("unfollow", middlewareLoggedIn(handlerUnfollow))
+	c.register("browse", middlewareLoggedIn(handlerBrowse))
 
 	// Parse input and run
 	input := os.Args
