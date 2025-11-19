@@ -1,4 +1,4 @@
-module github.com/Atm-0s/BlogAggregator
+module github.com/Atm-0s/gator
 
 go 1.25.1
 

@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Atm-0s/BlogAggregator/internal/config"
-	"github.com/Atm-0s/BlogAggregator/internal/database"
+	"github.com/Atm-0s/gator/internal/config"
+	"github.com/Atm-0s/gator/internal/database"
 	_ "github.com/lib/pq"
 )
 
