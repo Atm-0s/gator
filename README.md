@@ -48,14 +48,14 @@ gator agg <optional refresh time e.g 30s>
 gator browse
 ```
 
-`register` - Register a new user.
-`login` - Log in with a user.
-`users` - Show the list of registered users.
-`reset` - Delete all users from the database.
-`feeds` - Show the list of all feeds in the database.
-`addfeed` - Add a feed to the database.
-`follow` - Follow a particular feed for the current user.
-`following` - Show currently followed feeds for the current user.
-`unfollow` - Remove a feed from current users follow list.
-`agg` - Fetch the feeds at an optionally specified refresh rate.
-`browse` - Read the user's followed feeds.
+- `register` - Register a new user.
+- `login` - Log in with a user.
+- `users` - Show the list of registered users.
+- `reset` - Delete all users from the database.
+- `feeds` - Show the list of all feeds in the database.
+- `addfeed` - Add a feed to the database.
+- `follow` - Follow a particular feed for the current user.
+- `following` - Show currently followed feeds for the current user.
+- `unfollow` - Remove a feed from current users follow list.
+- `agg` - Fetch the feeds at an optionally specified refresh rate.
+- `browse` - Read the user's followed feeds.
